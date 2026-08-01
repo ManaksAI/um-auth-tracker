@@ -1,0 +1,87 @@
+/* Monochromatic token system. Severity is encoded by tone/weight, never hue.
+   One restrained cool-ink accent carries interactive + next-step affordances. */
+
+:root {
+  --ground: #f4f5f6;
+  --surface: #ffffff;
+  --raise: #fafbfb;
+  --ink: #16181b;
+  --ink-2: #3a3f45;
+  --muted: #6a7078;
+  --faint: #9aa0a7;
+  --line: #e3e6e9;
+  --line-2: #edeff1;
+  --fill: #eff1f3;
+  --accent: #3c4b5c;
+  --accent-ink: #ffffff;
+
+  /* Severity ramp — pure tone, no hue. */
+  --sev-crit: #16181b;
+  --sev-elev: #7b818a;
+  --sev-std: #c4c9ce;
+
+  --shadow: 0 1px 2px rgba(16, 20, 26, 0.04), 0 4px 18px rgba(16, 20, 26, 0.05);
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+  --radius: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #0c0e10;
+    --surface: #15181b;
+    --raise: #1a1e22;
+    --ink: #e9ebed;
+    --ink-2: #c4c8cd;
+    --muted: #878d95;
+    --faint: #5c636b;
+    --line: #262a2f;
+    --line-2: #202428;
+    --fill: #1f2429;
+    --accent: #aebece;
+    --accent-ink: #10161c;
+    --sev-crit: #edeff1;
+    --sev-elev: #8a9099;
+    --sev-std: #3a4046;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 22px rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* Viewer toggle wins over the media query in both directions. */
+:root[data-theme="dark"] {
+  --ground: #0c0e10;
+  --surface: #15181b;
+  --raise: #1a1e22;
+  --ink: #e9ebed;
+  --ink-2: #c4c8cd;
+  --muted: #878d95;
+  --faint: #5c636b;
+  --line: #262a2f;
+  --line-2: #202428;
+  --fill: #1f2429;
+  --accent: #aebece;
+  --accent-ink: #10161c;
+  --sev-crit: #edeff1;
+  --sev-elev: #8a9099;
+  --sev-std: #3a4046;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 6px 22px rgba(0, 0, 0, 0.35);
+}
+
+:root[data-theme="light"] {
+  --ground: #f4f5f6;
+  --surface: #ffffff;
+  --raise: #fafbfb;
+  --ink: #16181b;
+  --ink-2: #3a3f45;
+  --muted: #6a7078;
+  --faint: #9aa0a7;
+  --line: #e3e6e9;
+  --line-2: #edeff1;
+  --fill: #eff1f3;
+  --accent: #3c4b5c;
+  --accent-ink: #ffffff;
+  --sev-crit: #16181b;
+  --sev-elev: #7b818a;
+  --sev-std: #c4c9ce;
+  --shadow: 0 1px 2px rgba(16, 20, 26, 0.04), 0 4px 18px rgba(16, 20, 26, 0.05);
+}

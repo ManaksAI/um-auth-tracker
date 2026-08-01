@@ -1,0 +1,254 @@
+@import "./tokens.css";
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+}
+
+.mono {
+  font-family: var(--mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- App shell ---------- */
+.shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 34px 26px 80px;
+}
+
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+}
+.masthead .kicker {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0;
+}
+.masthead h1 {
+  font-size: 23px;
+  font-weight: 640;
+  letter-spacing: -0.02em;
+  margin: 9px 0 0;
+}
+.masthead .stats {
+  display: flex;
+  gap: 26px;
+  text-align: right;
+}
+.masthead .stat .n {
+  font-size: 22px;
+  font-weight: 660;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.masthead .stat .l {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+/* ---------- Tab nav ---------- */
+.tabnav {
+  display: flex;
+  gap: 4px;
+  margin: 24px 0 4px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 5px;
+  box-shadow: var(--shadow);
+}
+.tabnav button {
+  flex: 1 1 0;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 15px;
+  cursor: pointer;
+  color: var(--muted);
+  transition: 0.16s;
+}
+.tabnav button:hover {
+  background: var(--fill);
+  color: var(--ink-2);
+}
+.tabnav button[aria-selected="true"] {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.tabnav .k {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.7;
+}
+.tabnav .t {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 600;
+  margin-top: 3px;
+  letter-spacing: -0.01em;
+}
+.tabnav button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.hint {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  margin: 20px 2px 22px;
+  font-size: 13.5px;
+  color: var(--muted);
+  max-width: 82ch;
+}
+.hint b {
+  color: var(--ink-2);
+  font-weight: 600;
+}
+.hint .num {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--faint);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 2px 7px;
+  flex: none;
+}
+
+/* ---------- Shared severity key ---------- */
+.sevkey {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-size: 11.5px;
+  color: var(--muted);
+  flex-wrap: wrap;
+}
+.sevkey span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.sevkey i {
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* ---------- Next-step affordance ---------- */
+.step {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--accent);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+.step .arrow {
+  font-family: var(--mono);
+  opacity: 0.7;
+}
+.step:hover {
+  text-decoration: underline;
+}
+.step:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.btn {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 18px;
+  font-size: 13.5px;
+  font-weight: 620;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  transition: 0.15s;
+}
+.btn:hover {
+  filter: brightness(1.08);
+}
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.btn .arrow {
+  font-family: var(--mono);
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+
+footer.foot {
+  margin-top: 40px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  font-size: 12px;
+  color: var(--faint);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

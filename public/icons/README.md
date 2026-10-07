@@ -9,8 +9,20 @@ visual language. All are **monochromatic and theme-aware** — a single
 
 Tone is carried by `opacity`, never a second hue — same rule as the app.
 
-Two families are kept here. The **live favicon** is
-[`public/icon.svg`](../icon.svg) = **Gate valve** (`valve-gate.svg`).
+Families are kept here. The **live favicon** is
+[`public/icon.svg`](../icon.svg) = **Insight engine, clean** (`insight-clean.svg`).
+
+## Insight-engine family — the product thesis as a mark
+
+The core idea: a **case** (triangle) is **churned through the model** (spiral) to
+generate **insights** (lines fanning out in descending tone). Came from a hand
+sketch — the triangle is the case feeding in.
+
+| File | Treatment | Idea |
+| --- | --- | --- |
+| `insight-clean.svg` | **Clean** | Geometric case → spiral → three descending insight lines. **Live favicon.** |
+| `insight-pennant.svg` | **Pennant case** | Same engine, case drawn as the pennant from the original sketch. |
+| `insight-sketch.svg` | **Hand-drawn** | The clean mark with a light roughen filter — drawn-by-hand feel. |
 
 ## Valve family — prior auth as a valve that gates the flow of claims
 
